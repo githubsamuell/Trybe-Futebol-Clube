@@ -31,16 +31,4 @@ Clone o projeto
   git clone git@github.com:githubsamuell/Trybe-Futebol-Clube.git
 Entre no diretório do projeto
 
-  cd Trybe-Futebol-Clube
-Suba a orquestração de containers
-
-  docker-compose up -d
-A API estará pronta para uso quando a saída no seu terminal ficar assim (pode levar até 1 minuto)
-
-  Creating tfc_database ... done
-  Creating tfc_backend ... done
-  Creating tfc_frontend ... done
-Para encerrar a API basta executar o comando
-
-  docker-compose down
 
