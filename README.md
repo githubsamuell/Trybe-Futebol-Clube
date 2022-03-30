@@ -27,10 +27,9 @@ de uma tabela de um campeonato.
 Para rodar a API localmente certifique-se de ter Docker e Docker-Compose instalados em sua maquina.
 
 Clone o projeto
-<script type="text/javascript">
-   var vglnk = {key: ""};
-</script>
-  git clone git@github.com:githubsamuell/Trybe-Futebol-Clube.git
+
+  <span>git clone git@github.com:githubsamuell/Trybe-Futebol-Clube.git</span>
+  
 Entre no diretório do projeto
 
 cd Trybe-Futebol-Clube
