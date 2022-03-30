@@ -5,7 +5,7 @@ Foi um projeto avaliativo e com prazo de entrega, onde foi proposto que a pessoa
 um backend que atendesse todas as necessidades de um frontend que precisava criar, salvar, ler e atualizar informaçoes
 de uma tabela de um campeonato.
 
-## Algumas coisas que tive que realizar
+## Algumas coisas que realizei nesse desenvolvimento
 - Criar as rotas corretas utilizando o Express
 - Implementar controle de autenticação com JWT
 - Manipular um banco de dados MYSQL para criar, salvar ler e atualizar as informaçoes de forma correta
