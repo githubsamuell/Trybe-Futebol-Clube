@@ -13,7 +13,7 @@ de uma tabela de um campeonato.
 - Implementar os teste todo o codigo que foi produzido
 
 
-## Stacks Utilizadas
+## Ferramentas Utilizadas
 * Node.js
 * TypeScript
 * Object-Oriented Programming
