@@ -43,7 +43,7 @@ Caso queira encerrar a aplicação
 docker-compose down
 
 ### Para voce logar como usuario
-login: admin@admin.com <br>
+login: admin@admin.<span></span>com <br>
 senha: secret_admin
 
 
