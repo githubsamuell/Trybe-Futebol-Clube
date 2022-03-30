@@ -1,0 +1,4 @@
+bcryptjs
+-D @types/bcryptjs
+express-async-errors
+nodemon
