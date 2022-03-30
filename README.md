@@ -28,7 +28,7 @@ Para rodar a API localmente certifique-se de ter Docker e Docker-Compose instala
 
 Clone o projeto
 
-  git clone git@github.com:GabrielGaspar447/Trybe-Futebol-Clube.git
+  git clone git@github.com:githubsamuell/Trybe-Futebol-Clube.git
 Entre no diretório do projeto
 
   cd Trybe-Futebol-Clube
