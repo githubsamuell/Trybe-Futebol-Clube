@@ -31,4 +31,14 @@ Clone o projeto
   git clone git@github.com:githubsamuell/Trybe-Futebol-Clube.git
 Entre no diretório do projeto
 
+cd Trybe-Futebol-Clube
+
+Suba os containers docker
+
+docker-compose up -d
+
+Caso queira encerrar a aplicação
+
+docker-compose down
+
 
