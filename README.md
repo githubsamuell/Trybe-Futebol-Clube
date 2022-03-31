@@ -5,12 +5,12 @@ Foi um projeto avaliativo e com prazo de entrega, onde foi proposto que a pessoa
 um backend que atendesse todas as necessidades de um frontend que precisava criar, salvar, ler e atualizar informaçoes
 de uma tabela de um campeonato.
 
-## Algumas coisas que realizei nesse desenvolvimento
-- Criar as rotas corretas utilizando o Express
-- Implementar controle de autenticação com JWT
-- Manipular um banco de dados MYSQL para criar, salvar ler e atualizar as informaçoes de forma correta
-- Implementar o ORM Sequelize para ter mais controle com as informaçoes do banco
-- Implementar os teste todo o codigo que foi produzido
+## O que eu desenvolvi
+- Criei as rotas corretas utilizando o Express
+- Implementei controle de autenticação com JWT
+- Manipulei um banco de dados MYSQL para criar, salvar ler e atualizar as informaçoes de forma correta
+- Implementei o ORM Sequelize para ter mais controle com as informaçoes do banco
+- Implementei os teste de todo o codigo que foi produzido
 
 
 ## Ferramentas Utilizadas
