@@ -1,10 +1,13 @@
 import { Router } from 'express';
-import ClubController from '../controllers/Club';
+import { FindOneClubController, GetAllClubController } from '../controllers';
+import ClubController from '../controllers/Club/GetAllClub';
 
 class ClubRouter {
   public router: Router;
 
-  private controllerClub = new ClubController();
+  private findOneControllerClub = new FindOneClubController();
+
+  private getAllControllerClub = new GetAllClubController()
 
   constructor() {
     this.router = Router();
@@ -12,8 +15,8 @@ class ClubRouter {
   }
 
   start() {
-    this.router.get('/:id', this.controllerClub.findOneClub);
-    this.router.get('/', this.controllerClub.getAllClubs);
+    this.router.get('/:id', this.findOneControllerClub.handle);
+    this.router.get('/', this.getAllControllerClub.handle);
   }
 }
 

@@ -1,12 +1,12 @@
 import bcrypt = require('bcryptjs');
-import IUserReq from '../interfaces/login/IUserReq';
-import User from '../database/modelsSequelize/user';
-import { IUserRes } from '../interfaces/login';
+import IUserReq from '../../interfaces/login/IUserReq';
+import User from '../../database/modelsSequelize/user';
+import { IUserRes } from '../../interfaces/login';
 
 class LoginUserService {
-  userEntity = User;
+  private userEntity = User;
 
-  public async findUser({ password, email }: IUserReq): Promise<IUserRes | null> {
+  public async handle({ password, email }: IUserReq): Promise<IUserRes | null> {
     const user = await this.userEntity.findOne({ where: { email }, raw: true });
 
     if (!user) return null;

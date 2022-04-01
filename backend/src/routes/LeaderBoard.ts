@@ -1,10 +1,14 @@
 import { Router } from 'express';
-import LeaderBoardController from '../controllers/LeaderBoard';
+import { MakeListAllController, MakeListAwayController, MakeListHomeController } from '../controllers';
 
 class LeaderBoarderRouter {
   public router: Router;
 
-  private leaderController = new LeaderBoardController();
+  private getAllList = new MakeListAllController()
+
+  private getAwayList = new MakeListAwayController();
+
+  private getHomeList = new MakeListHomeController()
 
   constructor() {
     this.router = Router();
@@ -12,9 +16,9 @@ class LeaderBoarderRouter {
   }
 
   start() {
-    this.router.get('/', this.leaderController.leaderBoarderList);
-    this.router.get('/home', this.leaderController.leaderBoarderListHome);
-    this.router.get('/away', this.leaderController.leaderBoarderListAway);
+    this.router.get('/', this.getAllList.handle);
+    this.router.get('/home', this.getHomeList.handle);
+    this.router.get('/away', this.getAwayList.handle);
   }
 }
 

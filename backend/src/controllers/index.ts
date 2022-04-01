@@ -1,4 +1,11 @@
-export { default as ClubController } from './Club';
-export { default as MatchController } from './Match';
-export { default as LoginUserController } from './User';
-export { default as leaderBoardController } from './LeaderBoard';
+export { default as GetAllClubController } from './Club/GetAllClub';
+export { default as FindOneClubController } from './Club/FindOneClub';
+export { default as MakeListAllController } from './LeaderBoard/MakeListAll';
+export { default as MakeListAwayController } from './LeaderBoard/MakeListAway';
+export { default as MakeListHomeController } from './LeaderBoard/MakeListHome';
+export { default as FinishMatchController } from './Match/FinishMatchController';
+export { default as GetByProgressController } from './Match/GetByProgress';
+export { default as SaveInProgressController } from './Match/SaveInProgress';
+export { default as UpdateMatchController } from './Match/UpdateResultMatch';
+export { default as FindUserController } from './User/FindUser';
+export { default as VerifyAuthController } from './User/VerifyControllerAuth';
