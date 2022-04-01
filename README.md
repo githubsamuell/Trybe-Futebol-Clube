@@ -5,15 +5,15 @@ Foi um projeto avaliativo e com prazo de entrega, onde foi proposto que a pessoa
 um backend que atendesse todas as necessidades de um frontend que precisava criar, salvar, ler e atualizar informaçoes
 de uma tabela de um campeonato.
 
-## Algumas coisas que tive que realizar
-- Criar as rotas corretas utilizando o Express
-- Implementar controle de autenticação com JWT
-- Manipular um banco de dados MYSQL para criar, salvar ler e atualizar as informaçoes de forma correta
-- Implementar o ORM Sequelize para ter mais controle com as informaçoes do banco
-- Implementar os teste todo o codigo que foi produzido
+## O que eu desenvolvi
+- Criei as rotas corretas utilizando o Express
+- Implementei controle de autenticação com JWT
+- Manipulei um banco de dados MYSQL para criar, salvar ler e atualizar as informaçoes de forma correta
+- Implementei o ORM Sequelize para ter mais controle com as informaçoes do banco
+- Implementei os teste de todo o codigo que foi produzido
 
 
-## Stacks Utilizadas
+## Ferramentas Utilizadas
 * Node.js
 * TypeScript
 * Object-Oriented Programming
@@ -28,7 +28,22 @@ Para rodar a API localmente certifique-se de ter Docker e Docker-Compose instala
 
 Clone o projeto
 
-  git clone git@github.com:githubsamuell/Trybe-Futebol-Clube.git
+  <span>git clone git<span></span>@github.<span></span>com:githubsamuell/Trybe-Futebol-Clube.git</span>
+  
 Entre no diretório do projeto
+
+cd Trybe-Futebol-Clube
+
+Suba os containers docker
+
+docker-compose up -d
+
+Caso queira encerrar a aplicação
+
+docker-compose down
+
+### Para voce logar como usuario
+login: admin@admin.<span></span>com <br>
+senha: secret_admin
 
 
