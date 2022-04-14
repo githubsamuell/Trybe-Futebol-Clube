@@ -3,9 +3,15 @@ import db from '.';
 // import OtherModel from './OtherModel';
 
 class Club extends Model {
-  public id: number;
+  public getAll = async () => {
+    const all = await Club.findAll();
+    return all;
+  };
 
-  public clubName: string;
+  public findOne = async (id: number) => {
+    const oneClub = await Club.findOne({ where: { id } });
+    return oneClub;
+  };
 }
 
 Club.init({
