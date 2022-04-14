@@ -1,17 +1,16 @@
-/* import { app } from "../app";
+import { app } from "../app";
 import IMatchReq from "../interfaces/match/IMatchReq";
-import chaiHttp = require('chai-http');
+import 'chai-http';
 import * as chai from 'chai';
-import LoginUserController from "../controllers/User";
 import * as bcrypt from 'bcryptjs';
-import Sinon = require("sinon");
+import * as sinon from 'sinon';
 
-chai.use(chaiHttp);
+chai.use(require('chai-http'));
 const { expect } = chai;
 
 const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AYWRtaW4uY29tIiwiaWF0IjoxNjQ3ODk1NzY4LCJleHAiOjE2NDg1MDA1Njh9.op-ZUbbRwCzO_-Oy1lS3HJ1AfYtxrZyT5MLx9ikXLKU"
 
-Sinon.stub(bcrypt, 'compare').resolves(true);
+sinon.stub(bcrypt, 'compare').resolves(true);
 describe('Testa a rota de LoginUserController', () => {
     it('testa o retorno com um request invalido', async () => {
         const chaiHttpResponse = await chai
@@ -205,4 +204,3 @@ describe('Testa a classe LeaderBoarderController', () => {
       });
   })
   
- */
