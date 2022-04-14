@@ -1,9 +1,29 @@
 import { DataTypes, Model } from 'sequelize';
+import { IMatchReq } from '../../interfaces/match';
 import db from '.';
 import Club from './club';
+import IUpdateGoalsReq from '../../interfaces/match/IUpdateGoals';
 // import OtherModel from './OtherModel';
 
 class Match extends Model {
+  saveMatch = async (matchInfo: IMatchReq) => {
+    const newMatch = await Match.create(matchInfo);
+    return newMatch;
+  };
+
+  updateMatch = async (id: number, { homeTeamGoals, awayTeamGoals }: IUpdateGoalsReq) => {
+    const [updateMatch] = await Match.update(
+      { homeTeamGoals, awayTeamGoals },
+      { where: { id, inProgress: true } },
+    );
+    return updateMatch;
+  };
+
+  finishMatch = async (id: number) => {
+    const finishMatch = await Match.update({ inProgress: false }, { where: { id } });
+    return finishMatch;
+  };
+
   public id: number;
 
   public homeTeam: number;

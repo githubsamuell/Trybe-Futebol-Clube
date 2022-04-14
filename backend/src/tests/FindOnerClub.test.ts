@@ -1,4 +1,4 @@
-import {FindOneClubService} from '../services'
+/* import {FindOneClubService} from '../services'
 
 const { expect } = chai;
 
@@ -23,3 +23,4 @@ describe('Testa a classe FindOneClubService', async () => {
     })
   })  
 }); 
+ */

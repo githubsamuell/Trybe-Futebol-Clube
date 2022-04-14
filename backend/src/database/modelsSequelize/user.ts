@@ -3,7 +3,12 @@ import db from '.';
 // import OtherModel from './OtherModel';
 
 class User extends Model {
-  public id: number;
+  findUser = async (email: string) => {
+    const user = await User.findOne({ where: { email }, raw: true });
+    return user;
+  };
+
+  id: number;
 
   public username: string;
 

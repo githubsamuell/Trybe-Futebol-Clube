@@ -1,6 +1,6 @@
 import { makeQuery } from '../../utils';
 
-class LeaderBoardGetAllService {
+class ServiceLeaderBoardGetAll {
   private makeQuery = makeQuery;
 
   async handle() {
@@ -10,4 +10,4 @@ class LeaderBoardGetAllService {
   }
 }
 
-export default LeaderBoardGetAllService;
+export default ServiceLeaderBoardGetAll;

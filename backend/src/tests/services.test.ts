@@ -1,4 +1,4 @@
-import LoginUserService from "../services/UserLogin";
+/* import LoginUserService from "../services/UserLogin";
 import * as sinon from 'sinon';
 import * as chai from 'chai';
 import { before } from 'mocha';
@@ -149,3 +149,4 @@ describe('Testa a classe LeaderBoardService', async () => {
 });
 
   
+ */

@@ -1,20 +1,13 @@
 import { Router } from 'express';
-import { FinishMatchController, GetByProgressController, SaveInProgressController, UpdateMatchController } from '../controllers';
-import MatchController from '../controllers/Match/FinishMatchController';
+import ControllerMatch from '../controllers/Match/ControllerMatch';
 import ValidateAuth from '../middlewares/validateAuth';
 
 class MatchRouter {
   public router: Router;
 
-  private saveMatch = new SaveInProgressController()
-
-  private updateResults = new UpdateMatchController()
-
-  private finishMatch = new FinishMatchController()
+  private matchController = new ControllerMatch();
 
   private validateAuth = new ValidateAuth();
-
-  private getMatch = new GetByProgressController()
 
   constructor() {
     this.router = Router();
@@ -22,10 +15,10 @@ class MatchRouter {
   }
 
   start() {
-    this.router.get('/', this.getMatch.handle);
-    this.router.post('/', this.validateAuth.verifyToken, this.saveMatch.handle);
-    this.router.patch('/:id', this.updateResults.handle);
-    this.router.patch('/:id/finish', this.finishMatch.handle);
+    this.router.get('/', this.matchController.readByProgress);
+    this.router.post('/', this.validateAuth.verifyToken, this.matchController.createMatch);
+    this.router.patch('/:id', this.matchController.updateMatch);
+    this.router.patch('/:id/finish', this.matchController.updateProgress);
   }
 }
 

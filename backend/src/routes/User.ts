@@ -1,14 +1,15 @@
 import { Router } from 'express';
-import { FindUserController, VerifyAuthController } from '../controllers';
+import VerifyAuthController from '../controllers/User/VerifyControllerAuth';
+import ControllerUser from '../controllers/User/ControllerUser';
 import VerifyValidFields from '../middlewares/userMiddleware';
 import ValidateAuth from '../middlewares/validateAuth';
 
 class LoginRouter {
   public router: Router;
 
-  private findUserController = new FindUserController();
+  private userController = new ControllerUser();
 
-  private verifyAuth = new VerifyAuthController()
+  private verifyAuth = new VerifyAuthController();
 
   private validateFields = new VerifyValidFields();
 
@@ -25,7 +26,7 @@ class LoginRouter {
       this.validateAuth.verifyToken,
       this.verifyAuth.handle,
     );
-    this.router.post('/', this.validateFields.verifyRequest, this.findUserController.handle);
+    this.router.post('/', this.validateFields.verifyRequest, this.userController.readOne);
   }
 }
 

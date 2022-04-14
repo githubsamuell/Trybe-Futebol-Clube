@@ -12,6 +12,8 @@ class Club extends Model {
     const oneClub = await Club.findOne({ where: { id } });
     return oneClub;
   };
+
+  clubName: string;
 }
 
 Club.init({

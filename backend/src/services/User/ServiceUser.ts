@@ -3,13 +3,11 @@ import IUserReq from '../../interfaces/login/IUserReq';
 import User from '../../database/modelsSequelize/user';
 import { IUserRes } from '../../interfaces/login';
 
-class LoginUserService {
-  private userEntity = User;
+class ServiceUser extends User {
+  public async findOneUser({ password, email }: IUserReq): Promise<IUserRes | null> {
+    const user = await this.findUser(email);
 
-  public async handle({ password, email }: IUserReq): Promise<IUserRes | null> {
-    const user = await this.userEntity.findOne({ where: { email }, raw: true });
-
-    if (!user) return null;
+    if (!user) throw new Error('Not Found');
 
     const verifypassword = bcrypt.compareSync(password, user.password);
 
@@ -25,4 +23,4 @@ class LoginUserService {
   }
 }
 
-export default LoginUserService;
+export default ServiceUser;
