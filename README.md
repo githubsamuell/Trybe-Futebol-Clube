@@ -11,6 +11,7 @@ de uma tabela de um campeonato.
 - Manipulei um banco de dados MYSQL para criar, salvar ler e atualizar as informaçoes de forma correta
 - Implementei o ORM Sequelize para ter mais controle com as informaçoes do banco
 - Implementei os teste de todo o codigo que foi produzido
+- Implementei aquitetura MSC
 
 
 ## Ferramentas Utilizadas
